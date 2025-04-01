@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    background-color: #ffd1dc;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.carta {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: auto;
+    position: relative;
+    animation: bounceIn 1.5s ease-in-out;
+}
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    60% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+.carta img {
+    width: 100px;
+    border-radius: 50%;
+    animation: spin 3s infinite linear;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.carta h1 {
+    color: #ff4081;
+    font-size: 24px;
+}
+.carta p {
+    color: #555;
+    font-size: 18px;
+}
+.corazones {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: #ff4081;
+    animation: flotar 2s infinite alternate ease-in-out;
+}
+@keyframes flotar {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
